@@ -1,0 +1,4 @@
+{
+    "name": "LaTeX",
+    "image": "registry.gitlab.com/mu-bd-ce/devcontainers/latex:latest"
+}
