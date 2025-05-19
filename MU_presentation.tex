@@ -12,28 +12,23 @@
 \mucover
 
 \begin{frame}
-  \frametitle{Zer da Container bat?}
-  \begin{itemize}
-    \item Container bat Linux kernel-eko prozesu \textbf{isolatu} bat da.
-    \item Bere \textbf{fitxategi-sistema} propioa du.
-    \item Fitxategi-sistema hau \textbf{erreproduzitu} genezake.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
   \frametitle{Zer da Devcontainer bat?}
   \begin{itemize}
-    \item Container-en teknologia erabiltzen dute \textbf{garapen inguruneak} sortzeko.
-    \item Visual Studio Code-ren zerbitzari zatia Container barruan exekutatzen da.
-    \item Erabiltzaileak beraien VSCode-rekin konekta dezakete bezero gisa. Horrela, \textbf{garapena Container-ea} egon balira bezala egin dezakete.
+    \item Software \textbf{garapena} egiteko behar den ingurunea barnean dakarren \textit{Docker} \textbf{Container} bat da.
+    \item Visual Studio Code-ren zerbitzari zatia Container \textbf{barruan} exekutatzen da.
+    \item Garatzailea bere sistema eragilean duen Visual Studio Code-rekin konektatu daiteke bezero gisa. Horrela, \textbf{garapena Container-ean} egon balitz bezala egiten da.
+    \item Hasieran Microsoftek bultzatu zuen baina orain espezifikazio \textbf{ireki} bat da:
+      \url{https://containers.dev/}
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Garrantzia eremu akademikoan}
+  \frametitle{Garrantzia graduan}
   \begin{itemize}
-    \item Ikasleek (eta irakasleek) garapen-ingurune ezberdinak erabiltzen dituzte graduan zehar.
-    \item Devcontainer-ek ingurune hauek \textbf{bereizten} laguntzen dute.
+    \item Ikasleek eta irakasleek \textbf{hainbat} garapen-ingurune erabili behar dituzte graduan zehar. Ikasgai ezberdinak, transferentzia proiektuak, ikerketa, ...
+    \item Devcontainer-ek ingurune hauek elkarren artean \textbf{bereizten} laguntzen dute.
+    \item Devcontainer-ek ez dute sistema eragilea aldatzen.
+    \item Bertsio ezberdinen arteko \textbf{talkak ekiditen} laguntzen dute.
     \item \textbf{Erreplikagarriak} dira. Ikasleek eta irakasleek ingurune berdina izan dezaten laguntzen dute.
   \end{itemize}
 \end{frame}
@@ -41,10 +36,16 @@
 \begin{frame}
   \frametitle{Zer egin dugu?}
   \begin{itemize}
-    \item Ingurune hauek sortu eta banatzeko \textbf{git errepositorio} bat sortu dugu: \url{https://gitlab.com/mu-bd-ce/devcontainers}
-    \item Devcontainer-ei buruzko \textbf{dokumentazioa} duen webgune bat garatu dugu: \url{https://mu-bd-ce.gitlab.io/devcontainers}
+    \item Devcontainer-ei buruzko \textbf{git biltegi} bat sortu dugu:
+      \url{https://gitlab.com/mu-bd-ce/devcontainers}.
+
+      Bertan aurkituko ditugu:
       \begin{itemize}
-        \item Bertan nola erabili erakusteko \textbf{adibideak} daude.
+        \item Programazio lengoaia ezberdinendako \textbf{aurrez-sorturiko Devcontainer-ak}. Adibidez:
+          \url{registry.gitlab.com/mu-bd-ce/devcontainers/python:latest}
+        \item Hauei buruzko \textbf{dokumentazioa}:
+          \url{https://mu-bd-ce.gitlab.io/devcontainers}
+        \item Hauek nola erabili azaltzen duten \textbf{adibideak}.
       \end{itemize}
     \item Bigarren mailako web eta estatistika ikasgaietan \textbf{lehenengo saiakera} egin dugu.
   \end{itemize}
@@ -53,22 +54,14 @@
 \begin{frame}
   \frametitle{Gure Proposamena}
   \begin{itemize}
-    \item Hurrengo kurtsoan, hurbildu nahi duten gaiek ekimen honetan \textbf{parte hartu} dezakete.
-    \item Biltegiak \textbf{eztabaida-puntu} gisa funtzionatuko du (adibidez, graduko Java bertsioa).
-    \item Hori lehenengo hurbilketa da; devcontainer-en alderdi guztiak eztabaidatzeko \textbf{irekita} daude.
+    \item Uztailean Devcontainer-ei buruzko \textbf{tailer} bat egitea.
+    \item Hurrengo kurtsoan ekimen honetara \textbf{ikasgai gehiago batzea}.
+    \item Git biltegia graduan erabiltzen ditugun \textbf{teknologiak estandarizatzeko} erabiltzea (adibidez, graduko Java bertsioa) \footnote{Biltegi hau lehenengo hurbilketa da; Devcontainer hauen alderdi guztiak eztabaidatzeko \textbf{irekita} daude.}.
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Laburbilduz}
-  \begin{itemize}
-    \item Devcontainer-ek garapen-inguruneak \textbf{estandarizatzeko} modu indartsua eskaintzen dute.
-    \item \textbf{Kolaborazioa} eta \textbf{koherentzia} hobetzen dute akademikoen testuinguruan.
-    \item Irakasleak ekimen honetan parte hartzera \textbf{gonbidatzen} ditugu hurrengo ikasturtean.
-  \end{itemize}
-\end{frame}
-
-\muback{Eskerrik asko\\Muchas Gracias\\Thank you}{Software \& System Engineering\\
+\muback{Eskerrik asko}{Ibai Roman\\
+  Software \& System Engineering\\
   Electronics and Computer Science department\\
   Mondragon Unibertsitatea - Faculty of Engineering\\
 \href{www.mondragon.edu}{www.mondragon.edu}}
