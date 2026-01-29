@@ -1,2 +1,1 @@
-# latex-devcontainer-example
-LaTeX Devcontainer example
+# LaTeX Devcontainer example
