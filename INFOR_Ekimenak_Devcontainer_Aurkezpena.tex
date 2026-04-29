@@ -33,22 +33,23 @@
     \item VS Code-ren zerbitzari zatia Container \textbf{barruan} exekutatzen da.
     \item Garatzailea bere sistema eragilean duen VS Code-rekin konektatu daiteke bezero gisa. Horrela, \textbf{garapena Container-ean} egon balitz bezala egiten da.
   \end{itemize}
-  \begin{figure}
+  \begin{figure}[ht]
     \centering
-    \begin{tikzpicture}[scale=1.4, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1, every node/.style={font=\small}]
       % Linux box
-      \draw[thick, fill=blue!10] (-2,0.4) rectangle (5.9,2.25);
-      \node at (3,2) {Linux};
-      % Devcontainer box inside WSL2 distro
+      \draw[thick, fill=green!10] (-2,0.4) rectangle (5.9,2.25);
+      \node at (3,2) {Linux (Docker Engine)};
+      % DevContainer box inside WSL2 distro
       \draw[thick, fill=yellow!20] (1,0.6) rectangle (5,1.75);
-      \node at (3,1.5) {Devcontainer};
+      \node at (3,1.5) {DevContainer};
       % VS Code Server box inside WSL2 distro
-      \node[draw, fill=orange!20, rounded corners] at (3,1) {VS Code (Server)};
-      % VS Code (Client) outside, arrow to Devcontainer
-      \node[draw, fill=orange!20, rounded corners] at (-0.8,1) {VS Code (Client)};
-      \draw[->, thick] (0.25,1) -- (1.9,1);
+      \node[draw, fill=orange!20, rounded corners] (server) at (3,1) {VS Code (Zerbitzaria)};
+      % VS Code (Client) outside, arrow to DevContainer
+      \node[draw, fill=orange!20, rounded corners, align=center] (client) at (-0.8,1) {VS Code\\(Bezeroa)};
+      \draw[-] (client) -- (server);
     \end{tikzpicture}
-    \caption{Devcontainer-ak Linux-en}
+    \caption{Arkitektura Linux-en (Docker Engine)}
+    \label{fig:devcontainer_linux}
   \end{figure}
 \end{frame}
 
@@ -58,28 +59,29 @@
     \item VS Code-ren zerbitzari zatia Container \textbf{barruan} exekutatzen da.
     \item Garatzailea bere sistema eragilean duen VS Code-rekin konektatu daiteke bezero gisa. Horrela, \textbf{garapena Container-ean} egon balitz bezala egiten da.
   \end{itemize}
-  \begin{figure}
+  \begin{figure}[ht]
     \centering
-    \begin{tikzpicture}[scale=1.4, every node/.style={font=\small}]
+    \begin{tikzpicture}[scale=1, every node/.style={font=\small}]
       % Windows box
       \draw[thick, fill=blue!10] (-2,0) rectangle (5.9,3.25);
-      \node at (3,3) {Windows 11};
+      \node at (3,3) {Windows 11 (Hyper-V)};
       % WSL2 (VM) box inside Windows
-      \draw[thick, fill=green!10] (0.4,0.2) rectangle (5.6,2.75);
+      \draw[thick, fill=cyan!10] (0.4,0.2) rectangle (5.6,2.75);
       \node at (3,2.5) {WSL2 (VM)};
       % WSL2 distro box inside WSL2 (VM)
-      \draw[thick, fill=cyan!10] (0.7,0.4) rectangle (5.3,2.25);
-      \node at (3,2) {WSL2 distro (linuxkit)};
-      % Devcontainer box inside WSL2 distro
+      \draw[thick, fill=green!10] (0.7,0.4) rectangle (5.3,2.25);
+      \node at (3,2) {WSL2 distro (docker-desktop)};
+      % DevContainer box inside WSL2 distro
       \draw[thick, fill=yellow!20] (1,0.6) rectangle (5,1.75);
-      \node at (3,1.5) {Devcontainer};
+      \node at (3,1.5) {DevContainer};
       % VS Code Server box inside WSL2 distro
-      \node[draw, fill=orange!20, rounded corners] at (3,1) {VS Code (Server)};
-      % VS Code (Client) outside, arrow to Devcontainer
-      \node[draw, fill=orange!20, rounded corners] at (-0.8,1) {VS Code (Client)};
-      \draw[->, thick] (0.25,1) -- (1.9,1);
+      \node[draw, fill=orange!20, rounded corners] (server) at (3,1) {VS Code (Zerbitzaria)};
+      % VS Code (Client) outside, arrow to DevContainer
+      \node[draw, fill=orange!20, rounded corners, align=center] (client) at (-0.8,1) {VS Code\\(Bezeroa)};
+      \draw[-] (client) -- (server);
     \end{tikzpicture}
-    \caption{Devcontainer-ak Windows-en}
+    \caption{Arkitektura Windows-en (WSL2)}
+    \label{fig:devcontainer_windows}
   \end{figure}
 \end{frame}
 
